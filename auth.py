@@ -96,11 +96,13 @@ soup = BeautifulSoup(r.content)
 #print r.content
 error = soup.find(id="divLoginAlert")
 
-if error != ''
+
+if error != None:
     print u"登陆失败"
     print error
-else
+else:
     print u"登陆成功"
-    requests.cookies.save()
+    #requests.cookies.save()
+
 
 

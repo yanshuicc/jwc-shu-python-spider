@@ -80,7 +80,7 @@ else:
     print u"连接失败"
     exit()
 
-form = {'url':'','txtUserNo':'12121672','txtPassword':'','txtValidateCode':'','btnCheckLogin':'true'}
+form = {'url':'','txtUserNo':'12121672','txtPassword':'cploveydy','txtValidateCode':'','btnCheckLogin':'true'}
 headers = {
         'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36",
     }
@@ -96,11 +96,13 @@ soup = BeautifulSoup(r.content)
 #print r.content
 error = soup.find(id="divLoginAlert")
 
-if error != ''
+
+if error != None:
     print u"登陆失败"
     print error
-else
+else:
     print u"登陆成功"
-    requests.cookies.save()
+    #requests.cookies.save()
+
 
 
